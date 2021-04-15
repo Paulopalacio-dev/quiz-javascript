@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h2>QUIZ</h2>
+    </header>
+    <main class="container">
+        
+        <div class="tittle">
+            <h2>Conhecimentos Gerais</h2>
+        </div>
+
+        <div class="question1">
+            <p><strong>Qual o maior planeta do sistema solar?</strong></p>    
+        </div>
+
+            <form class="answer">
+                <div class="answer-single">
+                    <span>Urano</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+                </div>
+
+                <div class="answer-single">
+                    <span>Saturno</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+                </div>
+
+                <div class="answer-single">
+                    <span>Marte</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+                </div>
+
+                <div class="answer-single">
+                    <span>Jupiter</span>
+                <input type="radio" name="pergunta1" value="correta" />
+                <br/>
+                </div>
+            </form>
+
+        <div class="question2">
+            <p><strong>Quais são as cores presentes na bandeira da China?</strong></p>    
+        </div>
+
+            <form class="answer">
+                <div class="answer-single">
+                    <span>Laranja e amarelo</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+                </div>
+
+                <div class="answer-single">
+                    <span>Vermelho e branco</span>
+                <input type="radio" name="pergunta1" value="correta" />
+                <br/>
+                </div>
+
+                <div class="answer-single">
+                    <span>Vermelho e amarelo</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+                </div>
+
+                <div class="answer-single">
+                    <span>Vermelho, branco e amarelo</span>
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <br/>
+                </div>
+            </form>
+
+        <div class="question3">
+            <p><strong>Em que ano a seleção brasileira masculina de futebol conquistou o tetra campeonato da copa do mundo?</strong></p>   
+        </div>
+    
+            <form class="answer">
+                <div class="answer-single">
+                    <span>1994</span>
+                    <input type="radio" name="pergunta1" value="correta" />
+                    <br/>
+                </div>
+    
+                <div class="answer-single">
+                    <span>2002</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br/>
+                </div>
+    
+                <div class="answer-single">
+                    <span>1990</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br/>
+                </div>
+
+                <div class="answer-single">
+                    <span>1998</span>
+                    <input type="radio" name="pergunta1" value="icorreta" />
+                    <br/>
+                </div>
+            </form>
+
+        <div class="question4">
+            <p><strong>Quais desses animais não é classificado como aracnídeo?</strong></p>    
+        </div>
+        
+            <form class="answer">
+                <div class="answer-single">
+                    <span>Centopéia</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br/>
+                    </div>
+        
+                <div class="answer-single">
+                    <span>Carrapato</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br/>
+                </div>
+       
+                <div class="answer-single">
+                    <span>Aranha</span>
+                    <input type="radio" name="pergunta1" value="correta" />
+                    <br/>
+                </div>
+        
+                <div class="answer-single">
+                    <span>Escorpião</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br/>
+                </div>
+            </form>
+
+         <div class="question5">
+            <p><strong>Como se chama a transformação da matéria do estado líquido para o gasoso?</strong></p> 
+         </div>
+            
+            <form class="answer">
+                <div class="answer-single">
+                    <span>Vaporização</span>
+                    <input type="radio" name="pergunta1" value="correta" />
+                    <br/>
+                </div>
+            
+                <div class="answer-single">
+                    <span>Gaseificação</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                            <br/>
+                </div>
+            
+                <div class="answer-single">
+                    <span>Sublimação</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br/>
+                </div>
+            
+                <div class="answer-single">
+                    <span>Fusão</span>
+                    <input type="radio" name="pergunta1" value="incorreta" />
+                    <br/>
+                </div>
+            </form>
+
+            <button id='myButton' name="limpar"> Limpar Respostas </button>
+            <button id='myButton1' onClick=""> Anterior </button>
+            <button id='myButton2' onClick=""> Proximo </button>
+
+    
+    </main>
+
+
+    <script>
+            var elementos = document.querySelectorAll('[type=radio]');
+
+            for(var i = 0; i < elementos.length; i++){
+                elementos[i].addEventListener('change',function(e){
+                    let marcado = e.target.value;
+                    if(marcado == "correta"){
+                        
+                    let parentNode = e.target.parentNode;
+                    parentNode.style.backgroundColor = 'green';
+
+                    let els = parentNode.parentNode.querySelectorAll('[type=radio]');
+
+                    for(var n = 0; n < els.length; n++){
+                        els[n].disabled = true;
+                    }
+                        
+                    }else if(marcado == "incorreta"){
+                    let parentNode = e.target.parentNode;
+                    parentNode.style.backgroundColor = 'red';
+
+                    let els = parentNode.parentNode.querySelectorAll('[type=radio]');
+
+                    for(var n = 0; n < els.length; n++){
+                        els[n].disabled = true;
+                    }
+
+                    let correta = parentNode.parentNode.querySelector('[value=correta]');
+                    correta.parentNode.style.backgroundColor = 'green';
+
+
+                    }
+             
+                })
+               
+            }
+                //    document.querySelector('button[name=limpar]')
+                //    .addEventListener('click',()=>{
+                //     elementos = [];
+                //     els = [];
+                //     }
+
+            
+           
+        </script>
+</body>
+</html>

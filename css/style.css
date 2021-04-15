@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: font-family: 'Newsreader', serif;;
+}
+
+body {
+    margin: 0 auto;
+    font-weight: 400;
+    background: #ccc;
+   
+}
+
+header {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(252, 252, 252);
+    text-align:  center;   
+}
+
+header h2{
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(45, 32, 165);
+}
+
+.tittle h2 {
+    padding: 8px;
+    text-align: center;
+    color: rgb(107, 107, 107);
+    font-size: 25px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+}
+
+.question{
+    padding-top: 20px;
+}
+
+.question p strong {
+    font-size: 14px;
+}
+
+.answer {
+    width: 200px;
+    text-align: center;
+}
+.answer-single{
+   
+    border: 1px solid #ccc;
+    width: auto;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+    background-color:rgb(107, 107, 107); 
+    color: white;
+
+}
+
+#myButton {
+    background-color: rgb(107, 107, 107);
+    color:white;
+    padding: 12px;
+    margin-top: 10px ;
+}
+
+
+
